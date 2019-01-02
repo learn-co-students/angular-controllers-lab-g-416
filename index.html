@@ -1,27 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Angular Application</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div ng-app="app">
-        <div ng-controller="ContactController">
-            Hello, {{ name }}!
+      <div ng-controller="ContactController as contact">
+        Hello, {{ contact.name }}!
 
-            <div ng-controller="StaffController">
-                Also hello to {{ name }}, best friends with {{ name }}!
-            </div>
+        <div ng-controller="StaffController as staff">
+          Also hello to {{ staff.name }}, best friends with {{ contact.name }}!
         </div>
+      </div>
     </div>
 
     <script src="js/angular.js"></script>
     <script src="js/app/app.js"></script>
     <script src="js/app/controllers/ContactController.js"></script>
     <script src="js/app/controllers/StaffController.js"></script>
-
-</body>
+  </body>
 </html>
