@@ -12,8 +12,8 @@
         <div ng-controller="ContactController">
             Hello, {{ name }}!
 
-            <div ng-controller="StaffController">
-                Also hello to {{ name }}, best friends with {{ name }}!
+            <div ng-controller="StaffController as staff">
+                Also hello to {{ staff.name }}, best friends with {{ staff.name }}!
             </div>
         </div>
     </div>
